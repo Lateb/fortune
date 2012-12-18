@@ -1,0 +1,28 @@
+Lateb fortune
+=============
+
+Compilation
+-----------
+
+First you need a fortune compiler, like strfile:
+
+  * FreeBSD: Shipped by default;
+  * OpenBSD, NetBSD: Source code here: `/usr/src/games/fortune/strfile/`;
+  * Solaris: OpenCSW package `fortune`;
+  * Debian, Ubuntu: Package `fortune-mod`;
+  * Others: http://github.com/Aversiste/strfile;
+
+
+When you finally found and installed/compiled it, you can run this command:
+
+    $ strfile dat/tNETacle
+    "tNETacle.dat" created
+    There were 8 strings
+    Longest string: 309 bytes
+    Shortest string: 37 bytes
+
+Installation
+------------
+
+You can now install these two files in your fortune directory, probably
+`/usr/share/games/fortune`.
