@@ -10,8 +10,8 @@ First you need a fortune compiler, like strfile:
   * OpenBSD, NetBSD: Source code here: `/usr/src/games/fortune/strfile/`;
   * Solaris: OpenCSW package `fortune`;
   * Debian, Ubuntu: Package `fortune-mod`;
+  * Windows: Ah ah!;
   * Others: http://github.com/Aversiste/strfile;
-
 
 When you finally found and installed/compiled it, you can run this command:
 
