@@ -15,8 +15,8 @@ First you need a fortune compiler, like strfile:
 
 When you finally found and installed/compiled it, you can run this command:
 
-    $ strfile dat/tNETacle
-    "tNETacle.dat" created
+    $ strfile dat/lateb
+    "lateb.dat" created
     There were 8 strings
     Longest string: 309 bytes
     Shortest string: 37 bytes
