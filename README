@@ -1,10 +1,7 @@
 Lateb fortune
 =============
 
-Compilation
------------
-
-First you need a fortune compiler, like strfile:
+First you need a fortune compiler, usually strfile:
 
   * FreeBSD: Shipped by default;
   * OpenBSD, NetBSD: Source code here: `/usr/src/games/fortune/strfile/`;
@@ -13,16 +10,23 @@ First you need a fortune compiler, like strfile:
   * Windows: Ah ah!;
   * Others: http://github.com/Aversiste/strfile;
 
-When you finally found and installed/compiled it, you can run this command:
+On a BSD system, just run `make` and `make install`:
 
-    $ strfile dat/lateb
+    $ ls
+    Makefile   README     lateb.real
+    $ make && sudo make install
+    $ ls
+    Makefile   README     lateb      lateb.dat  lateb.real
+
+If you are unfortunate enough to only have access to gmake, run this:
+
+    $ tr '[a-zA-Z]' '[n-za-mN-ZA-M]' < lateb.real > lateb
+    $ strfile -rx lateb lateb.dat
     "lateb.dat" created
-    There were 8 strings
-    Longest string: 309 bytes
-    Shortest string: 37 bytes
+    There were 21 strings
+    Longest string: 62 bytes
+    Shortest string: 12 bytes
+    $ sudo cp lateb{,.dat} /usr/share/games/fortune
+    $ sudo chmod 444 /usr/share/games/fortune/lateb{,.dat}
+    $ sudo chown root:bin /usr/share/games/fortune/lateb{,.dat}
 
-Installation
-------------
-
-You can now install these two files in your fortune directory, probably
-`/usr/share/games/fortune`.
